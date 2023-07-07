@@ -25,7 +25,9 @@ public class LoginFilter extends HttpFilter implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpSession session = req.getSession();
 
-		if (session.getAttribute("loginMember") == null && !req.getRequestURI().endsWith("/login") && !req.getRequestURI().endsWith("/addMember")) {
+		if (session.getAttribute("loginMember") == null && !req.getRequestURI().endsWith("/login") 
+			&& !req.getRequestURI().endsWith("/addMember") && !req.getRequestURI().endsWith("/style.css")
+			&& !req.getRequestURI().contains("img")) {
 			HttpServletResponse rep = (HttpServletResponse) response;
 			rep.sendRedirect(req.getContextPath() + "/login");
 			return;

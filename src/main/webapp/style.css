@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+*{
+	padding: 0;
+	margin: 0;
+	color: #555;
+}
+html, body{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: lightyellow;
+}
+/* login.jsp */
+form{
+	position: absolute;
+	top: 35%;
+	left: 37.5%;
+	display: grid;
+	place-items: center;
+	min-width: 25%;
+	min-height: 30%;
+}
+form > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	border: 1px solid #999;
+	border-radius: 10px;
+	background-color: ivory;
+}
+form > div *:not(input){
+	width: 100%;
+	text-align: center;
+}
+form > div input{
+	width: 60%;
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid #999;
+}
+form > div > div{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+form div:nth-child(3){
+	margin-top: 20px;
+}
+form > div button, form > div a{
+	padding: 5px;
+	margin: 0 5px;
+	font-weight: bold;
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 4px;
+	border: 1px solid #999;
+	background-color: #f3f1d5;
+}
+form > div button:hover, form > div a:hover{
+	background-color: #777;
+	color: #f3f1d5;
+	cursor: pointer;
+}

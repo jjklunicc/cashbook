@@ -3,29 +3,25 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>login.jsp</title>
-	<style>
-		table, td{
-			border: 1px solid #888888;
-			border-collapse: collapse;
-		}
-	</style>
+	<title>나만의 가계부</title>
+	<link href="${pageContext.request.contextPath}/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="${pageContext.request.contextPath}/img/favicon.png">
 </head>
 <body>
-	<h1>로그인</h1>
 	<form method="post" action="${pageContext.request.contextPath}/login">
-		<table>
-			<tr>
-				<td>memberId</td>
-				<td><input type="text" name="memberId"></td>
-			</tr>
-			<tr>
-				<td>memberPw</td>
-				<td><input type="password" name="memberPw"></td>
-			</tr>
-		</table>
-		<button type="submit">로그인</button>
-		<a href="">회원가입</a>
+		<div>
+			<h1>로그인</h1>
+			<div>
+				아이디 <input type="text" name="memberId" required>
+			</div>
+			<div>
+				비밀번호 <input type="password" name="memberPw" required>
+			</div>
+			<div>
+				<button type="submit">로그인</button>
+				<a href="${pageContext.request.contextPath}/addMember">회원가입</a>
+			</div>
+		</div>
 	</form>
 </body>
 </html>
