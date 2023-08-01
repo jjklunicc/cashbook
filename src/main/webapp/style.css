@@ -9,10 +9,10 @@ html, body{
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-color: lightyellow;
+	background-color: white;
 }
 /* login.jsp */
-form{
+.login-form{
 	position: absolute;
 	top: 35%;
 	left: 37.5%;
@@ -21,7 +21,7 @@ form{
 	min-width: 25%;
 	min-height: 30%;
 }
-form > div{
+.login-form > div{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -33,27 +33,27 @@ form > div{
 	border-radius: 10px;
 	background-color: ivory;
 }
-form > div *:not(input){
+.login-form > div *:not(input){
 	width: 100%;
 	text-align: center;
 }
-form > div input{
+.login-form > div input{
 	width: 60%;
 	padding: 8px;
 	border-radius: 4px;
 	border: 1px solid #999;
 }
-form > div > div{
+.login-form > div > div{
 	display: flex;
 	justify-content: space-between;
 	margin-top: 40px;
 }
-form div:nth-child(3){
+.login-form div:nth-child(3){
 	margin-top: 20px;
 }
-form > div button, form > div a{
-	padding: 5px;
-	margin: 0 5px;
+.button-deco button,.button-deco a{
+	padding: 0.5%;
+	margin: 0.5%;
 	font-weight: bold;
 	font-size: 16px;
 	text-decoration: none;
@@ -61,8 +61,133 @@ form > div button, form > div a{
 	border: 1px solid #999;
 	background-color: #f3f1d5;
 }
-form > div button:hover, form > div a:hover{
+.button-deco button:hover, .button-deco a:hover{
 	background-color: #777;
 	color: #f3f1d5;
 	cursor: pointer;
+}
+.header{
+	width: 100%;
+	height: 8%;
+	background-color: ivory;
+	border-bottom: 1px solid lightgray;
+}
+.header img{
+	width: 15%;
+}
+.header > div{
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header .nav-btn{
+	width: 100%;
+	text-align: right;
+}
+.header .button-deco a{
+	padding: 1%;
+}
+.container{
+	width: 100%;
+	height: 80%;
+	margin-top: 2%;
+}
+.container > *{
+	margin: 0 auto;
+	text-align: center;
+}
+.calendar-wrapper > div:not(:nth-child(2)){
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.container .calendar{
+	width: 80%;
+	height: 70%;
+	margin-top: 2%;
+	text-align: left;
+}
+.container .calendar > div{
+	display: flex;
+	justify-content: space-between;
+	height: 16%;
+	border: 1px solid #333;
+}
+.container .calendar > div + div{
+	border-top: none;
+}
+.container .calendar > div > div{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding: 5px;
+	transition: all linear 0.1s;
+}
+.container .calendar > div > div+div{
+	border-left: 1px solid #333;
+}
+.container .calendar > div > div:hover{
+	cursor: pointer;
+	background-color: #fcf7a4;
+}
+.container .calendar > div .cashbook-data{
+	padding: 3px;
+}
+.container .calendar > div a{
+	text-decoration: none;
+}
+.container .calendar > div > .today{
+	background-color: #f9f9db;
+}
+.container .hashtags{
+	width: 50%;
+	font-style: italic;
+}
+.getPrice{
+	color: blue;
+}
+.spendPrice{
+	color: red;
+}
+.calendar-form{
+	width: 80%;
+	margin-top: 2%;
+}
+.calendar-form input{
+	width: 20%;
+	padding: 0.5%;
+	border-radius: 4px;
+	border: 1px solid lightgray;
+}
+.calendar-form input::placeholder{
+	font-style: italic
+}
+.calendar-form select{
+	width: 10%;
+	padding: 0.5%;
+	border-radius: 4px;
+	border: 1px solid lightgray;
+}
+.calendar-form button{
+	width: 7%;
+}
+.cashbook-list{
+	width: 80%;
+	margin-top: 2%;
+}
+.cashbook-list > div{
+	display: grid;
+	grid-template-columns: 15% 25% 35% 25%;
+	justify-content: center;
+	width: 100%;
+	padding: 1%;
+	border-bottom: 1px solid lightgray;
+}
+.cashbook-list > .list-header{
+	font-weight: bold;
+	background-color: #f9f9db;
+	font-size: 1.2rem;
 }

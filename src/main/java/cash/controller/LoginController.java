@@ -42,7 +42,7 @@ public class LoginController extends HttpServlet {
 		HttpSession session = request.getSession();
 		System.out.println("로그인 성공");
 		session.setAttribute("loginMember", loginMember);
-		response.sendRedirect(request.getContextPath() + "/cashbook");
+		response.sendRedirect(request.getContextPath() + "/calendar");
 	}
 
 }

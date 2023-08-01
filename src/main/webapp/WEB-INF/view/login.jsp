@@ -8,7 +8,7 @@
 	<link rel="icon" href="${pageContext.request.contextPath}/img/favicon.png">
 </head>
 <body>
-	<form method="post" action="${pageContext.request.contextPath}/login">
+	<form method="post" action="${pageContext.request.contextPath}/login" class="login-form button-deco">
 		<div>
 			<h1>로그인</h1>
 			<div>
@@ -19,7 +19,7 @@
 			</div>
 			<div>
 				<button type="submit">로그인</button>
-				<a href="${pageContext.request.contextPath}/addMember">회원가입</a>
+				<a href="/cash/addMember">회원가입</a>
 			</div>
 		</div>
 	</form>

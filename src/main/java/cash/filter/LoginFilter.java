@@ -21,9 +21,10 @@ import javax.servlet.http.HttpSession;
 public class LoginFilter extends HttpFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-
+		
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpSession session = req.getSession();
+		req.setCharacterEncoding("utf-8");
 
 		if (session.getAttribute("loginMember") == null && !req.getRequestURI().endsWith("/login") 
 			&& !req.getRequestURI().endsWith("/addMember") && !req.getRequestURI().endsWith("/style.css")
@@ -32,8 +33,6 @@ public class LoginFilter extends HttpFilter implements Filter {
 			rep.sendRedirect(req.getContextPath() + "/login");
 			return;
 		}
-
-		request.setCharacterEncoding("utf-8");
 
 		chain.doFilter(request, response);
 	}

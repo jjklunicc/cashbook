@@ -24,6 +24,9 @@ public class CalendarController extends HttpServlet {
 			
 		// view에 넘겨줄 달력정보(모델값)
 		Calendar firstDay = Calendar.getInstance(); // 오늘날짜
+		int todayYear = firstDay.get(Calendar.YEAR);
+		int todayMonth = firstDay.get(Calendar.MONTH);
+		int todayDate = firstDay.get(Calendar.DATE);
 		
 		// 출력하고자하는 년도,월,일의 기본값은 이번달 1일
 		
@@ -70,6 +73,10 @@ public class CalendarController extends HttpServlet {
 		request.setAttribute("totalCell", totalCell);
 		request.setAttribute("beginBlank", beginBlank);
 		request.setAttribute("endBlank", endBlank);
+		
+		request.setAttribute("todayYear", todayYear);
+		request.setAttribute("todayMonth", todayMonth);
+		request.setAttribute("todayDate", todayDate);
 		
 		request.setAttribute("list", list);
 		request.setAttribute("htList", htList);

@@ -3,23 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>나만의 가계부</title>
+	<link href="${pageContext.request.contextPath}/style.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="${pageContext.request.contextPath}/img/favicon.png">
 </head>
 <body>
-	<h1>회원탈퇴 </h1>
-	<form method="post" action="${pageContext.request.contextPath}/removeMember">
-	   <table>
-	      <tr>
-	         <td>Id</td>
-	         <td><input type="text" name="memberId" id="memberId" value="${id}" readonly="readonly"></td>
-	      </tr>
-	      <tr>
-	         <td>비밀번호 확인</td>
-	         <td><input type="password" name="memberPw"></td>
-	      </tr>
-	   </table>
-	   <button type="submit">탈퇴</button>
+	<form method="post" action="${pageContext.request.contextPath}/removeMember" class="login-form button-deco">
+	   <div>
+	   	  <h1>회원탈퇴 </h1>
+	      <div>
+	         아이디 <input type="text" name="memberId" id="memberId" value="${member.memberId}" readonly="readonly">
+	      </div>
+	      <div>
+	         비밀번호확인 <input type="password" name="memberPw">
+	      </div>
+	      <div>
+	      	<button type="submit">탈퇴</button>
+	      </div>
+	   </div>
 	</form>
 </body>
 </html>
