@@ -18,6 +18,7 @@
         	비밀번호 <input type="password" name="memberPw" id="memberPw" required>
         </div>
         <div>
+        	<a href="/cash/login">이전</a>
         	<button type="submit">회원가입</button>
         </div>
       </div>

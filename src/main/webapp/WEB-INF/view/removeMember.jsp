@@ -19,6 +19,7 @@
 	         비밀번호확인 <input type="password" name="memberPw">
 	      </div>
 	      <div>
+	      	<a href="/cash/calendar">이전</a>
 	      	<button type="submit">탈퇴</button>
 	      </div>
 	   </div>
