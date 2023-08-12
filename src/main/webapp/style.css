@@ -152,6 +152,12 @@ html, body{
 .spendPrice{
 	color: red;
 }
+.saturday{
+	color: blue;
+}
+.sunday{
+	color: red;
+}
 .calendar-form{
 	width: 80%;
 	margin-top: 2%;
@@ -180,8 +186,9 @@ html, body{
 }
 .cashbook-list > div{
 	display: grid;
-	grid-template-columns: 15% 25% 35% 25%;
+	grid-template-columns: 10% 25% 30% 25% 10%;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
 	padding: 1%;
 	border-bottom: 1px solid lightgray;
@@ -190,4 +197,10 @@ html, body{
 	font-weight: bold;
 	background-color: #f9f9db;
 	font-size: 1.2rem;
+}
+.cashbook-list div button{
+	padding: 3% 6%;
+}
+.before-btn{
+	margin-top: 3%;
 }

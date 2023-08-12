@@ -20,7 +20,7 @@ public class HashtagDao {
 	     
 		try {
 			String driver = "org.mariadb.jdbc.Driver";
-			String dbUrl = "jdbc:mariadb://52.79.53.122/cash";
+			String dbUrl = "jdbc:mariadb://52.79.53.122:3306/cash";
 			String dbUser = "root";
 			String dbPw = "java1234";
 			Class.forName(driver);
@@ -64,7 +64,7 @@ public class HashtagDao {
 	      int row = 0;
 	      try {
 	         String driver = "org.mariadb.jdbc.Driver";
-	         String dbUrl = "jdbc:mariadb://127.0.0.1:3306/cash";
+	         String dbUrl = "jdbc:mariadb://52.79.53.122:3306/cash";
 	         String dbUser = "root";
 	         String dbPw = "java1234";
 	         Class.forName(driver);

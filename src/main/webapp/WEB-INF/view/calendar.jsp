@@ -29,8 +29,15 @@
 			<div>
 				<c:forEach var="i" begin="0" end="${totalCell - 1}" step="1">
 					<c:set var="d" value="${i-beginBlank+1}"></c:set>
+					<c:set var="sunday" value=""></c:set>
+					<c:set var="saturday" value=""></c:set>
 					<c:if test="${i!=0 && i%7==0}">
+						<c:set var="sunday" value="sunday"></c:set>
 						</div><div>
+					</c:if>
+					
+					<c:if test="${i%7==6}">
+						<c:set var="saturday" value="saturday"></c:set>
 					</c:if>
 					
 					<c:if test="${d < 1 || d > lastDate}">
@@ -44,7 +51,7 @@
 						</c:if>
 						<div onclick="dateClick(${d})" class="${todayClass}">
 							<div>
-								<b>${d}</b>
+								<b class="${sunday} ${saturday}">${d}</b>
 							</div>
 							<c:set var="totalGet" value="${0}"></c:set>
 							<c:set var="totalSpend" value="${0}"></c:set>
@@ -77,7 +84,7 @@
 			</c:if>
 			<div class="hashtags">
 				<c:forEach var="m" items="${htList}">
-					<a href="${pageContext.request.contextPath}/cashbookListByTag?word=${m.word}">#${m.word} (${m.cnt})</a>
+					<a href="${pageContext.request.contextPath}/cashbookListByTag?word=${m.word}&targetYear=${targetYear}&targetMonth=${targetMonth}">#${m.word} (${m.cnt})</a>
 				</c:forEach>
 			</div>
 		</div>

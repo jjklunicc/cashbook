@@ -79,7 +79,7 @@ public class MemberDao {
 		
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/Cash", "root", "java1234");
+			conn = DriverManager.getConnection("jdbc:mariadb://52.79.53.122:3306/cash", "root", "java1234");
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, memberId);
 			stmt.setString(2, memberPw);
@@ -109,7 +109,7 @@ public class MemberDao {
 		
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/Cash", "root", "java1234");
+			conn = DriverManager.getConnection("jdbc:mariadb://52.79.53.122:3306/cash", "root", "java1234");
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, memberId);
 				System.out.println(stmt);

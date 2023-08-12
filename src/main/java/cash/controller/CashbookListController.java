@@ -23,6 +23,8 @@ public class CashbookListController extends HttpServlet {
 		String memberId = "user";
 		
 		String word = request.getParameter("word");
+		int targetYear = Integer.parseInt(request.getParameter("targetYear"));
+		int targetMonth = Integer.parseInt(request.getParameter("targetMonth"));
 	
 		// 페이징 알고리즘
 		int currentPage = 1;
@@ -30,10 +32,12 @@ public class CashbookListController extends HttpServlet {
 		int beginRow = 0;
 		
 		CashbookDao cashbookDao = new CashbookDao();
-		List<Cashbook> list = cashbookDao.selectCashbookListByTag(memberId, word, beginRow, rowPerPage);
+		List<Cashbook> list = cashbookDao.selectCashbookListByTag(memberId, word, beginRow, rowPerPage, targetYear, targetMonth+1);
 		
 		request.setAttribute("word", word);
 		request.setAttribute("list", list);
+		request.setAttribute("targetYear", targetYear);
+		request.setAttribute("targetMonth", targetMonth);
 		
 		// 뷰로 포워딩
 		request.getRequestDispatcher("WEB-INF/view/cashbookListByTag.jsp").forward(request, response);

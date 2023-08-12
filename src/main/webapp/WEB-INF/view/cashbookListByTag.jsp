@@ -19,6 +19,7 @@
 				<div>금액</div>
 				<div>메모</div>
 				<div>발생일자</div>
+				<div>&nbsp;</div>
 			</div>
 			<c:forEach var="c" items="${list}">
 				<div>
@@ -33,8 +34,20 @@
 					</div>
 					<div>${c.memo}</div>
 					<div>${c.cashbookDate}</div>
+					<div class="button-deco">
+						<form method="post" action="/cash/removeCashbook"> 
+							<input type="hidden" name="targetYear" value="${targetYear }">
+							<input type="hidden" name="targetMonth" value="${targetMonth }">
+							<input type="hidden" name="targetDate" value="${targetDate }">
+							<input type="hidden" name="cashbookNo" value="${c.cashbookNo }">
+							<button type="submit">삭제</button>
+						</form>
+					</div>
 				</div>
 			</c:forEach>
+		</div>
+		<div class="button-deco before-btn">
+			<a href="/cash/calendar?targetYear=${targetYear }&targetMonth=${targetMonth}">이전</a>
 		</div>
 	</div>
 </body>
